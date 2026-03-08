@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DecisionLens</title>
+</head>
+<body>
+    <h2>Enter Your Decision</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <textarea name="decision_text" rows="4" cols="50"></textarea><br><br>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+        <h3>Result:</h3>
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
