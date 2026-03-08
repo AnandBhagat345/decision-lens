@@ -11,9 +11,20 @@
         <button type="submit">Analyze</button>
     </form>
 
-    {% if result %}
-        <h3>Result:</h3>
-        <p>{{ result }}</p>
-    {% endif %}
+    {% if paths %}
+<h3>Decision Analysis</h3>
+
+<ul>
+    {% for p in paths %}
+        <li>
+            <b>Option:</b> {{ p.path }} <br>
+            <b>Risk Level:</b> {{ p.risk }} <br>
+            <b>Reason:</b> {{ p.reason }}
+        </li>
+        <br>
+    {% endfor %}
+</ul>
+
+{% endif %}
 </body>
 </html>
