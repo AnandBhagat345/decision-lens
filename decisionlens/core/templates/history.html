@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Decision History</title>
+</head>
+
+<body>
+
+<h2>Decision Journal</h2>
+
+<ul>
+{% for d in decisions %}
+<li>
+{{ d.text }} <br>
+<small>{{ d.created_at }}</small>
+</li>
+<br>
+{% endfor %}
+</ul>
+
+<a href="/">Back</a>
+
+</body>
+</html>
